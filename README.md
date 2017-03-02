@@ -1,2 +1,2 @@
 # BirdBox
-My version of a RaspberryPi BirdBox
+My version of a RaspberryPi Bird Box
