@@ -87,6 +87,16 @@ Pi NoIR camera, IR LEDs and microphone on a single board for the bird box's ceil
 
 ... under construction!
 
+For some tests I used streaming to YouTube with following command, which basics I found in [Part 2 of the Bird Box Worksheets](https://www.raspberrypi.org/learning/infrared-bird-box/worksheet2/).
+
+`raspivid -o - -t 0 -w 480 -h 360 -vf -hf -sa -100 -br 60 -rot 270 -fps 25 -b 400000 -g 75 | ffmpeg -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -f h264 -i - -vcodec copy -acodec aac -ab 128k -g 75 -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/<access-key-here>`
+
+Major changes are
+
+`-w 480 -h 360 -vf -hf -sa -100 -br 60 -rot 270 -fps 25 -b 400000 -g 75`
+
+where I reduced the video **w**idth and **h**eight to 480 by 360 pixels, **v**ertically and **h**orizontally **f**lipped the image , reduced the colour **sa**turation to get a greyscaled picture, enhanced **br**ightness, **ro**tated the image by 270 degrees for correct orientation, fixed the **f**rames **p**er **s**econd to 25, limited the **b**andwidth to 400 kbps, and told the codec to transmit a full image every 75 frames (**g** 75/25 fps = 3 s).
+
 ## Licensing ##
 
 Please respect all licenses.
