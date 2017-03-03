@@ -15,8 +15,11 @@ As the Box is (of course) located outside, and the Pi too, a weatherproof case w
 
 - [BOPLA Euromas II ET-215 (120x80x57mm³)](https://www.reichelt.de/Kunststoffgehaeuse-BOPLA/BOPLA-ET-215/3/index.html?ACTION=3&LA=5700&ARTICLE=5729&GROUPID=7712&artnr=BOPLA+ET-215)
 
-To fit all components (Pi, wiring, WiFi and microphone adaptors) into the case a quick (and dirty) hack was done, as you can see in the pictures. The RPi suits well into the case, but the WiFi antenna and the USB connector stick out. The only solid connection to the outer world is a four lines shielded wire.
+To fit all components (Pi, wiring, WiFi and microphone adaptors) into the case a quick (and dirty) hack was done, as you can see in the pictures. Thanks to an adapting plate the RPi suits well into the case.
 
+![](Images4ReadMe/case-plate.jpg)
+
+But the WiFi antenna and the USB connector stick out. The only solid connection to the outer world is a four lines shielded wire.
 
 - 2 lines are for 5 V power
 - 1 line is for Serial TX from the Pi
@@ -43,6 +46,8 @@ It's dark inside the box. Two LEDs are used to illuminate what's happening with 
 
 I think it is a good idea not to power the LEDs all the time. There may be times no birds are living in the box or the whole streaming/pi/camera stuff is down due to reasons<sup>TM</sup>. So I added a NPN-transistor to the two LEDs in line, to be triggered by a GPIO of the Pi.
 
+![](Images4ReadMe/IR-LED_Schaltplan.png)
+
 ## Microphone ##
 
 From internet sources about streaming out of a bird box I found they all were using the video stream only. What about sound? To get the option of experimenting with and later adding sound from inside the box, I mounted a small USB ready microphone into the box too.
@@ -62,6 +67,7 @@ As I hadn't have much time for a proper assembly after business hours, family ne
 
 ###The box electrics###
 
+![](Images4ReadMe/box-plate.jpg)
 
 ## Software ##
 
