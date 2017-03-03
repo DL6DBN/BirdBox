@@ -37,7 +37,7 @@ to use it with the RPi2.
 
 ## LEDs ##
 
-It's dark inside the box. Two LEDs are used to illuminate what's happening with the birds. I sand down the LEDs a bit to get a more diffuse light. And they are not directly pointed to the birds but to the walls.
+It's dark inside the box. Two LEDs are used to illuminate what's happening with the birds. I sanded down the LEDs a bit to get a more diffuse light. And they are not directly pointed to the birds but to the walls.
 
 - [LD 271 Infrared Diode, 950 nm, 25°](https://www.reichelt.de/Fotodioden-etc-/LD-271/3/index.html?ACTION=3&LA=5700&ARTICLE=10199&GROUPID=3045&artnr=LD+271)
 
