@@ -52,7 +52,7 @@ I think it is a good idea not to power the IR-LEDs all the time. There may be ti
 
 From internet sources about streaming out of a bird box I found they all were using the video stream only. What about sound? To get the option of experimenting with and later adding sound from the birds inside the box, I mounted a small USB ready microphone into the box too.
 
-As the Pi has no sound/mic input, I baught this one: 
+As the Pi has no sound/mic input, I bought this one: 
 
 - [Blusmart USB Lavalier Microphone](https://www.amazon.de/dp/B01MZ60SAR/ref=sr_1_2?ie=UTF8&qid=1488534236&sr=8-2&keywords=lavalier+mikrofon+usb)
 
@@ -60,10 +60,15 @@ So far, I have no idea, if and how it'll work. But the ALSA recording tool that 
 
 ## Assembly ##
 
-As I hadn't have much time for a proper assembly after business hours, family needs and gardening, it became a rather quick and dirty hack. See the following pictures...
+As I hadn't have much time for a proper assembly after business hours and family needs, it became really a rather quick and dirty hack. See the following pictures...
 
 ###The completed case###
 
+![](Images4ReadMe/case-breakthrough.jpg)
+
+![](Images4ReadMe/case-pi-fits.jpg)
+
+![](Images4ReadMe/case-usb.jpg)
 
 ###The box electrics###
 
