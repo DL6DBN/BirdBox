@@ -14,7 +14,6 @@ Here I'll describe the several steps that led me to the final box...
 
 As the Box is (of course) located outside, and the Pi too, a weatherproofed case was needed. I found
 
-
 - [BOPLA Euromas II ET-215 (120x80x57mm³)](https://www.reichelt.de/Kunststoffgehaeuse-BOPLA/BOPLA-ET-215/3/index.html?ACTION=3&LA=5700&ARTICLE=5729&GROUPID=7712&artnr=BOPLA+ET-215)
 
 To fit all components (Pi, wiring, WiFi and microphone connectors) into the case a quick (and dirty) hack was done, as you can see in the pictures. Thanks to an adapting plate the case suits well to the Pi.
@@ -30,7 +29,9 @@ But the WiFi antenna and the USB connector stick out. The only solid connection 
 
 The serial lines were chosen to get access to the hidden Raspberry Pi, if wireless access fails.
 
-In the end all openings (USB, wirings) were sealed with silicone for outside purposes and the case screwed onto the bird box.
+The only disadvantage of the small case was: the microUSB supply plug didn't fit (even a small angled one, but I knew that before). So I soldered two small wires to the bottom side of the PI's PCB at the socket pads.
+
+In the end all openings (USB, wirings for camera, LEDs and supply voltage) were sealed with silicone for outside purposes and the case screwed onto the bird box.
 
 ## WiFi ##
 
@@ -66,13 +67,21 @@ As I hadn't have much time for a proper assembly after business hours and family
 
 ![](Images4ReadMe/case-breakthrough.jpg)
 
+The breakthrough for the camera cable and the LED supply
+
 ![](Images4ReadMe/case-pi-fits.jpg)
 
+The Raspberry Pi fits
+
 ![](Images4ReadMe/case-usb.jpg)
+
+USB dongles (WiFi, microphone) sticking out
 
 ###The box electrics###
 
 ![](Images4ReadMe/box-plate.jpg)
+
+Pi NoIR camera, IR LEDs and microphone on a single board for the bird box's ceiling
 
 ## Software ##
 
