@@ -77,11 +77,27 @@ The Raspberry Pi fits
 
 USB dongles (WiFi, microphone) sticking out
 
+![](Images4ReadMe/pi-on-the-box.jpg)
+
+Wired RPi in the case on the bird box
+
 ###The box electrics###
 
 ![](Images4ReadMe/box-plate.jpg)
 
 Pi NoIR camera, IR LEDs and microphone on a single board for the bird box's ceiling
+
+![](Images4ReadMe/box-electrics.jpg)
+
+Electronics mounted in the bird box
+
+![](Images4ReadMe/wired-box.jpg)
+
+Wires (mic, LEDs, cam) sticking out of the box.
+
+![](Images4ReadMe/box-ready.jpg)
+
+Hardware finished!
 
 ## Software ##
 
