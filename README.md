@@ -101,7 +101,11 @@ Hardware finished!
 
 ## Software ##
 
-... under construction!
+### It streams ... ###
+
+![](Images4ReadMe/streaming.jpg)
+
+### ... under construction! ###
 
 For some tests I used streaming to YouTube with following command, which basics I found in [Part 2 of the Bird Box Worksheets](https://www.raspberrypi.org/learning/infrared-bird-box/worksheet2/).
 
