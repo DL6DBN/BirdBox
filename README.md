@@ -117,6 +117,15 @@ Major changes are
 
 where I reduced the video **w**idth and **h**eight to 480 by 360 pixels, **v**ertically and **h**orizontally **f**lipped the image , reduced the colour **sa**turation to get a greyscaled picture, enhanced **br**ightness, **ro**tated the image by 270 degrees for correct orientation, fixed the **f**rames **p**er **s**econd to 25, limited the **b**andwidth to 400 kbps, and told the codec to transmit a full image every 75 frames (**g** 75/25 fps = 3 s).
 
+## Going Live ##
+
+I really didn't notice the entry of birds. Today (mid June 2017) my son came in and shouted "Dad, turn the BurdCam on". And yes there were some just hatched titmice with one of their parents in the box.
+
+![](Images4ReadMe/BirdCamTitmice.jpg)
+
+When bandwidth and power constraints allow streaming, the system will be turned on.<br>
+Actual links to the streams will be published via my [Twitter account](https://twitter.com/DL6DBN) with HashTag #BirdCamDL6DBN.
+
 ## Licensing ##
 
 Please respect all licenses.
