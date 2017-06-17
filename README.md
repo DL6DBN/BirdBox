@@ -119,7 +119,7 @@ where I reduced the video **w**idth and **h**eight to 480 by 360 pixels, **v**er
 
 ## Going Live ##
 
-I really didn't notice the entry of birds. Today (mid June 2017) my son came in and shouted "Dad, turn the BurdCam on". And yes there were some just hatched titmice with one of their parents in the box.
+I really didn't notice the entry of birds. Today (mid June 2017) my son came in and shouted "Dad, turn the bird cam on". And yes there were some just hatched titmice with one of their parents in the box.
 
 ![](Images4ReadMe/BirdCamTitmice.jpg)
 
