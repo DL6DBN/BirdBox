@@ -2,7 +2,7 @@
 
 My version of a RaspberryPi Bird Box
 
-On the Raspberry Pi Homepage I found a tutorial about a [bird box](https://www.raspberrypi.org/learning/infrared-bird-box/) watching camera. As I had a [Pi NoIR camera](https://www.raspberrypi.org/learning/infrared-bird-box/components/camera-noir/) and a [Raspberry Pi 2](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/) at hand for no other purposes, I started this project in mid February. I hoped this won't be to late for some birds to find a home in the box.
+On the Raspberry Pi Homepage I found a tutorial about a [bird box](https://www.raspberrypi.org/learning/infrared-bird-box/) watching camera. As I had a [Pi NoIR camera](https://www.raspberrypi.org/learning/infrared-bird-box/components/camera-noir/) and a [Raspberry Pi 2](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/) at hand for no other purposes, I started this project in mid February 2017. I hoped this won't be to late for some birds to find a home in the box.
 
 Here I'll describe the several steps that led me to the final box...
 
@@ -12,11 +12,11 @@ Here I'll describe the several steps that led me to the final box...
 
 ## Case ##
 
-As the Box is (of course) located outside, and the Pi too, a weatherproofed case was needed. I found
+As the Box is (of course) located outside, and the Pi too, a weather-proofed case was needed. I found the
 
 - [BOPLA Euromas II ET-215 (120x80x57mm³)](https://www.reichelt.de/Kunststoffgehaeuse-BOPLA/BOPLA-ET-215/3/index.html?ACTION=3&LA=5700&ARTICLE=5729&GROUPID=7712&artnr=BOPLA+ET-215)
 
-To fit all components (Pi, wiring, WiFi and microphone connectors) into the case a quick (and dirty) hack was done, as you can see in the pictures. Thanks to an adapting plate the case suits well to the Pi.
+To fit all components (Pi, wiring, WiFi and microphone connectors) into the case a quick (and dirty) hack was done, as you can see in the pictures. Thanks to an adapting plate (see below) the case suits well to the Pi.
 
 ![](Images4ReadMe/case-plate.jpg)
 
@@ -53,9 +53,9 @@ I think it is a good idea not to power the IR-LEDs all the time. There may be ti
 
 From internet sources about streaming out of a bird box I found they all were using the video stream only. What about sound? To get the option of experimenting with and later adding sound from the birds inside the box, I mounted a small USB ready microphone into the box too.
 
-As the Pi has no sound/mic input, I bought this one: 
+As the Pi has no sound/mic input, I bought one of this kind: 
 
-- [Blusmart USB Lavalier Microphone](https://www.amazon.de/dp/B01MZ60SAR/ref=sr_1_2?ie=UTF8&qid=1488534236&sr=8-2&keywords=lavalier+mikrofon+usb)
+- [USB Lavalier Microphone](https://www.amazon.de/Seacue-Omnidirektionaler-Kondensator-Interviews-Netzwerksingen/dp/B071171DBP/ref=sr_1_6?s=ce-de&ie=UTF8&qid=1540189333&sr=1-6&keywords=lavalier+mikrofon+usb)
 
 So far, I have no idea, if and how it'll work. But the ALSA recording tool that comes with the Raspian distro indicated different sound levels from the mic though nothing useful was recorded yet.
 
@@ -115,7 +115,7 @@ Major changes are
 
 `-w 480 -h 360 -vf -hf -sa -100 -br 60 -rot 270 -fps 25 -b 400000 -g 75`
 
-where I reduced the video **w**idth and **h**eight to 480 by 360 pixels, **v**ertically and **h**orizontally **f**lipped the image , reduced the colour **sa**turation to get a greyscaled picture, enhanced **br**ightness, **ro**tated the image by 270 degrees for correct orientation, fixed the **f**rames **p**er **s**econd to 25, limited the **b**andwidth to 400 kbps, and told the codec to transmit a full image every 75 frames (**g** 75/25 fps = 3 s).
+where I reduced the video **w**idth and **h**eight to 480 by 360 pixels, **v**ertically and **h**orizontally **f**lipped the image, reduced the colour **sa**turation to get a greyscaled picture, enhanced **br**ightness, **ro**tated the image by 270 degrees for correct orientation, fixed the **f**rames **p**er **s**econd to 25, limited the **b**andwidth to 400 kbps, and told the codec to transmit a full image every 75 frames (**g** 75/25 fps = 3 s).
 
 ## Going Live ##
 
@@ -126,12 +126,24 @@ I really didn't notice the entry of birds. Today (mid June 2017) my son came in 
 When bandwidth and power constraints allow streaming, the system will be turned on.<br>
 Actual links to the streams will be published via my [Twitter account](https://twitter.com/DL6DBN) with HashTag #BirdCamDL6DBN.
 
+## Archive ##
+
+Find a playlist of streamed videos [here](https://www.youtube.com/playlist?list=PLy5ecgafiimP4Lyqy01Moq5EMXKOon5B8).
+
+## Upgrade 2018 ##
+
+After two bird seasons I thought it might be interesting to monitor temperature and humidity inside the bird box. So I added a combined sensor [DHT22](https://www.adafruit.com/product/385) into the box.
+
+![](Images4ReadMe/box-temphumid.jpg)
+
+![](Images4ReadMe/case-temphumid.jpg)
+
 ## Licensing ##
 
 Please respect all licenses.
 
 The initial tutorial is provided for free by the [Raspberry Pi Foundation](https://www.raspberrypi.org/) under a [Creative Commons](https://www.raspberrypi.org/creative-commons/) licence. Find more at [raspberrypi.org/resources](https://www.raspberrypi.org/resources/) and [github.com/raspberrypilearning](https://github.com/raspberrypilearning).
 
-All my additions to the project or own creations for the project are for use under the<br> **Beer-Ware License** (Revision 42.fs): "<dl6dbn@googlemail.com> made this stuff. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a beer (or another drink I like) in return."<br>*Frank Sperber (DL6DBN)* with thanks to [PHK](https://people.freebsd.org/~phk/) for writing down this beautiful kind of license.
+All my additions to the project or own creations for the project are for use under the<br> **Beer-Ware License** (Revision 42.fs): "*dl6dbn@googlemail.com* made this stuff. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a beer (or another drink I like) in return."<br>*Frank Sperber (DL6DBN)* with thanks to [PHK](https://people.freebsd.org/~phk/) for writing down this beautiful kind of license.
 
-*as of: March 2017*
+*as of: October 2018*
