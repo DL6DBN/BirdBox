@@ -1,5 +1,7 @@
 # BirdBox #
 
+***AUDIO STREAMING UPDATE 2020 SEE AT THE END.***
+
 My version of a RaspberryPi Bird Box
 
 On the Raspberry Pi Homepage I found a tutorial about a [bird box](https://www.raspberrypi.org/learning/infrared-bird-box/) watching camera. As I had a [Pi NoIR camera](https://www.raspberrypi.org/learning/infrared-bird-box/components/camera-noir/) and a [Raspberry Pi 2](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/) at hand for no other purposes, I started this project in mid February 2017. I hoped this won't be to late for some birds to find a home in the box.
@@ -128,15 +130,52 @@ Actual links to the streams will be published via my [Twitter account](https://t
 
 ## Archive ##
 
-Find a playlist of streamed videos [here](https://www.youtube.com/playlist?list=PLy5ecgafiimP4Lyqy01Moq5EMXKOon5B8).
+Find a playlist of streamed videos
 
+- [2018 here](https://www.youtube.com/playlist?list=PLy5ecgafiimP4Lyqy01Moq5EMXKOon5B8)
+- [2019 here](https://www.youtube.com/playlist?list=PLy5ecgafiimPUM18iq6unHePp7gxMli2x)
+- [2020 here](https://www.youtube.com/playlist?list=PLy5ecgafiimPxJH5WLR6nkk11A7hIaXlS)
 ## Upgrade 2018 ##
 
-After two bird seasons I thought it might be interesting to monitor temperature and humidity inside the bird box. So I added a combined sensor [DHT22](https://www.adafruit.com/product/385) into the box.
+After two bird seasons I thought it might be interesting to monitor temperature and humidity inside the bird box. So I added a combined sensor [DHT22](https://www.adafruit.com/product/385) into the box. Unfortunately the measurements aren't still public available and overlayed into the video.
 
 ![](Images4ReadMe/box-temphumid.jpg)
 
 ![](Images4ReadMe/case-temphumid.jpg)
+
+## Upgrade 2020 ##
+
+It took another two bird seasons to get audio from mic into the stream (there were too many other intersting projects). Here is the code I put together after diving into several RasPi communities to get inspiration and a lot of experimenting what works for me and what doesn't:
+
+`raspivid -o - -t 0 -w 480 -h 360 -vf -hf -sa -100 -br 60 -rot 270 -fps 25 -b 400000 -g 75 | ffmpeg -re -thread_queue-size 4096 -itsoffset 1 -ar 22050 -ac 2 -f alsa -thread_queue-size 4096 -itsoffset 0 -ac 2 -i plughw:CARD=AK5371,DEV=0 -f h264 -i - -vcodec copy -acodec aac -ab 128k -g 75 -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/<access-key-here>`
+
+**What's new?**
+
+In
+
+`ffmpeg -re -thread_queue-size 4096 -ar 22050 -ac 2 -f alsa -thread_queue-size 4096 -ac 2 -i plughw:CARD=AK5371,DEV=0`
+
+I added the audio source
+
+`-i plughw:CARD=AK5371,DEV=0`
+
+which I found with
+
+`arecord -L`
+
+Replace it with your audio source.
+
+I noticed the sample rate should be at least 
+
+`-ar 22050`
+
+otherwise the bird's sound maybe to high for proper sampling. And occasionally there occured a buffer error, so I increased the buffer size
+
+`-thread_queue-size 4096`
+
+As video and audio were off-sync, I played a bit with the settings of an offset
+
+`-itsoffset 1`
 
 ## Licensing ##
 
@@ -146,4 +185,4 @@ The initial tutorial is provided for free by the [Raspberry Pi Foundation](https
 
 All my additions to the project or own creations for the project are for use under the<br> **Beer-Ware License** (Revision 42.fs): "*dl6dbn@googlemail.com* made this stuff. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a beer (or another drink I like) in return."<br>*Frank Sperber (DL6DBN)* with thanks to [PHK](https://people.freebsd.org/~phk/) for writing down this beautiful kind of license.
 
-*as of: October 2018*
+*as of: May 2020*
